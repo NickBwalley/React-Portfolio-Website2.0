@@ -11,7 +11,8 @@
 :root {
   --primary-hue: 270;
   --black-lightness: 15%;
-  --dark-lightness: 94%;
+  --dark-lightness: 44%;
+  --light-lightness: 94%;
   --white-lightness: 100%;
   --color-primary: hsl(var(--primary-hue), 89%, 41%);
   --color-white: hsl(0, 5%, var(--white-lightness));
@@ -30,4 +31,32 @@
 
   /*GENERAL TRANSITION VARIABLE*/
   --transition: all 500ms ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/*GENERAL CONTAINER CLASS*/
+.container {
+  width: var(--container-width-lg);
+  margin-inline: auto;
+  max-width: 1920px;
+}
+
+/*GENERAL CONTAINER STYLES*/
+section {
+  padding: 10rem 0;
+  background: var(--color-light);
+  transition: var(--transition);
+}
+
+section:nth-child(even) {
+  background: var(--color-white);
 }
